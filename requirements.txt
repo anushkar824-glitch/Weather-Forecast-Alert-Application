@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-httpx
-pandas
-matplotlib
-python-dotenv
