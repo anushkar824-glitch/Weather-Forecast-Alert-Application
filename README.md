@@ -1,91 +1,36 @@
-# SkyPulse – Weather Forecast & Alert Application
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A full-stack weather dashboard that displays live weather conditions, forecasts, weather alerts, charts, saved cities, and downloadable CSV reports. Chennai, Tamil Nadu is the default location.
+## Getting Started
 
-## Features
-
-- Live weather data powered by the [Open-Meteo API](https://open-meteo.com/) (no API key required)
-- Search for cities and save locations
-- Current weather conditions and atmospheric details
-- 24-hour temperature and precipitation probability charts
-- 7-day weather forecast
-- Rule-based weather alerts
-- Interactive location map
-- Sunrise and sunset information
-- Weather history stored in SQLite
-- CSV weather report export
-- FastAPI backend with interactive API documentation
-- Next.js dashboard with responsive charts
-
-## Tech Stack
-
-**Frontend:** Next.js, React, TypeScript, Tailwind CSS, Recharts, Lucide React  
-**Backend:** Python, FastAPI, HTTPX  
-**Data:** Open-Meteo Geocoding and Forecast APIs, SQLite, CSV
-
-## Project Structure
-
-```
-Weather-Forecast-Alert-Application/
-├── backend/
-│   ├── main.py
-│   ├── weather.py
-│   ├── alerts.py
-│   ├── database.py
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   └── app/
-│   ├── package.json
-│   └── ...
-├── data/
-├── reports/
-├── screenshots/
-├── .gitignore
-└── README.md
-```
-
-## Run Locally
-
-### 1. Backend
-
-From the project root, create and activate a Python virtual environment if desired, then install dependencies:
+First, run the development server:
 
 ```bash
-cd backend
-python -m pip install -r requirements.txt
-python -m uvicorn main:app --reload
-```
-
-The API runs at http://127.0.0.1:8000. Interactive API documentation is available at http://127.0.0.1:8000/docs.
-
-### 2. Frontend
-
-Open a second terminal:
-
-```bash
-cd frontend
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Keep both terminals running while using the application.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Data Source
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Weather and geocoding data are retrieved from Open-Meteo. Availability of individual weather measurements depends on the selected location and the upstream API response.
+## Learn More
 
-## Notes
+To learn more about Next.js, take a look at the following resources:
 
-- The SQLite database is created locally when the backend runs; database files are excluded from version control.
-- Do not commit virtual environments, `node_modules`, build output, or secret environment files.
-- Weather alerts are generated from configurable threshold rules and are intended for informational use.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Future Improvements
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Scheduled background weather refresh
-- Email or Telegram notifications
-- More configurable alert thresholds
-- Deployment of the frontend and backend
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
